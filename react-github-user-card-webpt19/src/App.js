@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import UserCard from "./Components/UserCard";
 import FollowerCard from "./Components/FollowerCard";
+import Form from "./Form";
 import "./App.css";
 
 class App extends Component {
@@ -34,6 +35,7 @@ class App extends Component {
   render() {
     return (
     <div className="App">
+      <Form /> 
       <UserCard data={this.state.user}/>
       {this.state.followers.map(follower => <FollowerCard follower={follower} /> )}
     </div>
